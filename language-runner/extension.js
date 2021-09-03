@@ -33,6 +33,10 @@ function activate(context) {
 		} else if (file_name.slice(file_name.length - 2, file_name.length) == '.c') {
 			RunnerTerminal.sendText('gcc "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledC.exe"');
 			RunnerTerminal.sendText('CompiledC.exe')
+		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.py') {
+			RunnerTerminal.sendText('py "' + vscode.window.activeTextEditor.document.fileName + '"');
+		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.js') {
+			RunnerTerminal.sendText('node "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 4, file_name.length) == '.cpp') {
 			RunnerTerminal.sendText('g++ "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledCPP.exe"');
 			RunnerTerminal.sendText('CompiledCPP.exe')
