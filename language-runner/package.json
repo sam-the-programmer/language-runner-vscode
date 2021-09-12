@@ -51,6 +51,17 @@
 				]
 			},
 			{
+				"id": "go",
+				"extensions": [
+					".go"
+				],
+				"aliases": [
+					"Go",
+					"go",
+					"GO"
+				]
+			},
+			{
 				"id": "c",
 				"extensions": [
 					".c"
@@ -75,6 +86,12 @@
 			"editor/title": [
 				{
 					"when": "resourceLangId == vb",
+					"command": "language-runner.run",
+					"alt": "language-runner.run",
+					"group": "navigation"
+				},
+				{
+					"when": "resourceLangId == go",
 					"command": "language-runner.run",
 					"alt": "language-runner.run",
 					"group": "navigation"

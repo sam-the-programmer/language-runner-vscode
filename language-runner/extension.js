@@ -1,9 +1,4 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -39,11 +34,9 @@ function activate(context) {
 			RunnerTerminal.sendText('node "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 4, file_name.length) == '.cpp') {
 			RunnerTerminal.sendText('g++ "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledCPP.exe"');
-			RunnerTerminal.sendText('CompiledCPP.exe')
+		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.go') {
+			RunnerTerminal.sendText('go run "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 2, file_name.length) == '.r') {
-			// if (String(vscode.workspace.fs.readFile(vscode.Uri(vscode.window.document.activeTextEditor.fileName))).includes("plot")) {
-			// 	vscode.window.showInformationMessage("Plots may have been created. Find them on Rplots.pdf.");
-			// }
 			RunnerTerminal.sendText('rscript "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else {
 			vscode.window.showErrorMessage('Language Runner cannot run a ' + String(file_name.slice(file_name.length - 2, file_name.length)) + ' file.');
