@@ -21,6 +21,7 @@ function activate(context) {
 			RunnerTerminal = vscode.window.createTerminal('Language Runner');
 		};
 		let file_name = vscode.window.activeTextEditor.document.fileName;
+		vscode.workspace.saveAll(false)
 
 		if (file_name.slice(file_name.length - 3, file_name.length) == '.vb') {
 			RunnerTerminal.sendText('vbc "' + vscode.window.activeTextEditor.document.fileName + '" /out:"CompiledVB.exe"');
