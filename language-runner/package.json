@@ -97,12 +97,6 @@
 					"group": "navigation"
 				},
 				{
-					"when": "resourceLangId == r",
-					"command": "language-runner.run",
-					"alt": "language-runner.run",
-					"group": "navigation"
-				},
-				{
 					"when": "resourceLangId == cpp",
 					"command": "language-runner.run",
 					"alt": "language-runner.run",
