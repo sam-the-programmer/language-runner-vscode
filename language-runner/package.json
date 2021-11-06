@@ -3,7 +3,7 @@
 	"displayName": "Language Runner",
 	"author": "Password-Classified",
 	"publisher": "Password-Classified",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Runner for languages such as C, C++, R and VB.NET.",
 	"engines": {
 		"vscode": "^1.59.0"

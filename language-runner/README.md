@@ -2,9 +2,14 @@
 
 Welcome to Language Runner! It is the quick and easy extension to run:
 
-- R
 - C
+- C#
 - C++
+- Go
+- Haskell
+- Node JS
+- Python
+- R
 - VB .NET
 
 in VS Code! More languages are on the way, alongside snippets for supported languages!

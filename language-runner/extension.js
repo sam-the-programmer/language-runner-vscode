@@ -26,15 +26,27 @@ function activate(context) {
 		if (file_name.slice(file_name.length - 3, file_name.length) == '.vb') {
 			RunnerTerminal.sendText('vbc "' + vscode.window.activeTextEditor.document.fileName + '" /out:"CompiledVB.exe"');
 			RunnerTerminal.sendText('CompiledVB.exe')
-		} else if (file_name.slice(file_name.length - 2, file_name.length) == '.c') {
-			RunnerTerminal.sendText('gcc "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledC.exe"');
-			RunnerTerminal.sendText('CompiledC.exe')
+
 		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.py') {
 			RunnerTerminal.sendText('py "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.js') {
 			RunnerTerminal.sendText('node "' + vscode.window.activeTextEditor.document.fileName + '"');
+			
+		} else if (file_name.slice(file_name.length - 2, file_name.length) == '.c') {
+			RunnerTerminal.sendText('gcc "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledC.exe"');
+			RunnerTerminal.sendText('CompiledC.exe')
+			
+		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.hs') {
+			RunnerTerminal.sendText('ghc "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledHS.exe"');
+			RunnerTerminal.sendText('CompiledHS.exe')
+
 		} else if (file_name.slice(file_name.length - 4, file_name.length) == '.cpp') {
 			RunnerTerminal.sendText('g++ "' + vscode.window.activeTextEditor.document.fileName + '" -o "CompiledCPP.exe"');
+			RunnerTerminal.sendText('CompiledCPP.exe')
+		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.cs') {
+			RunnerTerminal.sendText('csc /t:exe /outCompiledCS.exe "' + vscode.window.activeTextEditor.document.fileName + '"');
+			RunnerTerminal.sendText('CompiledCS.exe')
+
 		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.go') {
 			RunnerTerminal.sendText('go run "' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 2, file_name.length) == '.r') {
