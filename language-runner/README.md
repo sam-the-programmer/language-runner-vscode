@@ -2,6 +2,8 @@
 
 Welcome to Language Runner! It is the quick and easy extension to run:
 
+- Batch
+- Bash
 - C
 - C#
 - C++
