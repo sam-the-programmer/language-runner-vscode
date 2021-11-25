@@ -38,11 +38,11 @@ function activate(context) {
 			RunnerTerminal.sendText('CompiledCS.exe')
 
 		} else if (file_name.slice(file_name.length - 4, file_name.length) == '.bat') { // Batch
-			RunnerTerminal.sendText(vscode.window.activeTextEditor.document.fileName);
+			RunnerTerminal.sendText('"' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.sh') { // ShellScript
-			RunnerTerminal.sendText(vscode.window.activeTextEditor.document.fileName);
+			RunnerTerminal.sendText('"' + vscode.window.activeTextEditor.document.fileName + '"');
 		} else if (file_name.slice(file_name.length - 5, file_name.length) == '.bash') { // Bash
-			RunnerTerminal.sendText(vscode.window.activeTextEditor.document.fileName);
+			RunnerTerminal.sendText('"' + vscode.window.activeTextEditor.document.fileName + '"');
 
 		} else if (file_name.slice(file_name.length - 3, file_name.length) == '.go') { // Go
 			RunnerTerminal.sendText('go run "' + vscode.window.activeTextEditor.document.fileName + '"');
