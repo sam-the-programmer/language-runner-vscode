@@ -40,6 +40,25 @@
 				]
 			},
 			{
+				"id": "bat",
+				"extensions": [
+					".bat"
+				],
+				"aliases": [
+					"batch"
+				]
+			},
+			{
+				"id": "bash",
+				"extensions": [
+					".sh",
+					".bash"
+				],
+				"aliases": [
+					"shellscript"
+				]
+			},
+			{
 				"id": "cpp",
 				"extensions": [
 					".cpp"
@@ -92,6 +111,18 @@
 				},
 				{
 					"when": "resourceLangId == go",
+					"command": "language-runner.run",
+					"alt": "language-runner.run",
+					"group": "navigation"
+				},
+				{
+					"when": "resourceLangId == bat",
+					"command": "language-runner.run",
+					"alt": "language-runner.run",
+					"group": "navigation"
+				},
+				{
+					"when": "resourceLangId == bash",
 					"command": "language-runner.run",
 					"alt": "language-runner.run",
 					"group": "navigation"
