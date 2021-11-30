@@ -74,8 +74,35 @@ function activate(context) {
 		RunnerTerminal.show(false);
 	});
 
+	let npmStart = vscode.commands.registerCommand('language-runner.npm-start', function () {
+		let terminal_length = vscode.window.terminals.length;
+		let is_r_term = false;
+		let RunnerTerminal = vscode.window.activeTerminal;
+
+		for (let i = 0; i < terminal_length; i++) {
+			if (vscode.window.terminals[i].name == 'Language Runner') {
+				is_r_term = true;
+			}
+		}
+
+
+		if (is_r_term == false) {
+			RunnerTerminal = vscode.window.createTerminal('Language Runner');
+		};
+		let file_name = vscode.window.activeTextEditor.document.fileName;
+		vscode.workspace.saveAll(false)
+
+		if (file_name.slice(file_name.length - 3, file_name.length) == '.js') { // Npm Start
+			RunnerTerminal.sendText('npm start');
+		}
+		RunnerTerminal.show(false);
+	});
+
 	context.subscriptions.push(runMyCode);
+	context.subscriptions.push(npmStart);
 }
+
+
 
 // this method is called when your extension is deactivated
 function deactivate() { }

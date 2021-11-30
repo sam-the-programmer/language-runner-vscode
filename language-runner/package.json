@@ -25,6 +25,15 @@
 					"light": "./run.png",
 					"dark": "./run.png"
 				}
+			},
+			{
+				"command": "language-runner.npm-start",
+				"category": "Language Runner",
+				"title": "Run NPM Start",
+				"icon": {
+					"light": "./run.png",
+					"dark": "./run.png"
+				}
 			}
 		],
 		"languages": [
@@ -105,6 +114,12 @@
 			"editor/title": [
 				{
 					"when": "resourceLangId == vb",
+					"command": "language-runner.run",
+					"alt": "language-runner.run",
+					"group": "navigation"
+				},
+				{
+					"when": "resourceLangId == js",
 					"command": "language-runner.run",
 					"alt": "language-runner.run",
 					"group": "navigation"
