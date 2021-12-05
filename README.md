@@ -1,8 +1,11 @@
 <section align="center">
 <img alt="logo" src="language-runner/icon.png" width="300"/>
-
+<div>
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/password-classified/language-runner-vscode/total?style=for-the-badge">
+  </div>
+  <br>
 </section>
+
 Welcome to Language Runner! It is the quick and easy extension to run:
 
 - R
