@@ -1,7 +1,7 @@
 <section align="center">
 <img alt="logo" src="language-runner/icon.png" width="300"/>
 <div>
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/password-classified/language-runner-vscode/total?style=for-the-badge">
+<img alt="Visual Studio Marketplace Installs" src="https://img.shields.io/visual-studio-marketplace/i/password-classified.language-runner?style=for-the-badge">
   </div>
   <br>
 </section>
