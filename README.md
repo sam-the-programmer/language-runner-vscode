@@ -6,6 +6,8 @@
   <br>
 </section>
 
+---
+
 Welcome to Language Runner! It is the quick and easy extension to run:
 
 - R
