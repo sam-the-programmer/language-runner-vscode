@@ -1,3 +1,5 @@
+![logo](language-runner/icon.png)
+
 # Language-Runner
 
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/password-classified/language-runner-vscode/total?style=for-the-badge">
@@ -13,6 +15,11 @@ in VS Code! More languages are on the way, alongside snippets for supported lang
 
 ## Installation
 
+### From the Marketplace
+Search `language-runner` and install the one with the icon like ours.
+
+
+### From Source
 To install, visit the Github Repository and download the .VSIX file from the Releases page with the latest stable release. Then, using the Extensions tab, click the 3 dots (`...`) and click _`Install from .VSIX`_. Use the VSIX you downloaded and there you go! Language Runner is setup on your machine!
 
 <img src="https://via.placeholder.com/15/c39953/000000?text=+" /><img src="https://via.placeholder.com/15/e88e5a/000000?text=+" /><img src="https://via.placeholder.com/15/d2691e/000000?text=+" /><img src="https://via.placeholder.com/15/c46210/000000?text=+" /><img src="https://via.placeholder.com/15/a57164/000000?text=+" /><img src="https://via.placeholder.com/15/93379/000000?text=+" />
